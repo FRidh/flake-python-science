@@ -1,4 +1,4 @@
-# `flake-scipy`
+# `flake-python-science`
 
 This repository contains a flake with Python packages related to scientic
 computing.
