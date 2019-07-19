@@ -3,6 +3,7 @@
 let
   pythonPackages = import ./packages;
 in {
+  # Python interpreters that extend the Nixpkgs set with our packages
   python27 = nixpkgs.python27.override {
     packageOverrides = pythonPackages;
   };
