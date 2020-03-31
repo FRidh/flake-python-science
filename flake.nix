@@ -1,13 +1,11 @@
 {
-  name = "python-science";
-
-  edition = 201906;
+  edition = 201909;
 
   description = "A package set with science-related Python packages";
 
-  inputs = [ "nixpkgs" ];
+  inputs.nixpkgs.url = "nixpkgs/nixos-20.03";
 
-  outputs = inputs: rec {
-    packages = import ./. { nixpkgs = inputs.nixpkgs.legacyPackages; };
+  outputs = { self, nixpkgs}: rec {
+    packages = import ./. { nixpkgs = nixpkgs.legacyPackages; };
   };
 }
